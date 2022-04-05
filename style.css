@@ -58,3 +58,7 @@ button {
 button:hover {
 	color: #9AA0A6;
 }
+
+#results {
+	display: none;
+}
