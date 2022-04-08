@@ -1,25 +1,29 @@
-var students = [];
-
 fetch('data.json')
     .then(response => response.json())
     .then(data => displayData(data));
 
-function buttonClicked(student) {
-    const targetDiv = document.getElementById("results");
-    
-    if(targetDiv.style.display === 'none') {
-        targetDiv.style.display = 'block';
-        targetDiv.innerHTML = student;
-    } else 
-        targetDiv.style.display = 'none';
-} 
+function btnFunc(student_name, hiddenDiv) {
+    if(hiddenDiv.style.display === "none")
+        hiddenDiv.style.display = "block";
+    else
+        hiddenDiv.style.display = "none";
+}
 
 function displayData(obj) {
     const container = document.getElementById('JSONValues');
+    var frag = document.createDocumentFragment();
+
     for(var i = 0; i < obj.students.length; i++) {
-        students[i] = document.createElement('button');
-        students[i].insertAdjacentHTML("beforeend", obj.students[i].name);
-        students[i].addEventListener("click", buttonClicked.bind(null, obj.students[i].name));
-        container.appendChild(students[i]);
+        var studentButton = document.createElement("button");
+        var studentInfo = document.createElement("div");
+
+        studentInfo.style.display = 'none';
+        studentInfo.innerHTML = "Halloj :)";
+
+        studentButton.textContent = obj.students[i].name;
+        studentButton.addEventListener("click", btnFunc.bind(null, obj.students[i].name, studentInfo));
+        frag.appendChild(studentButton); 
+        frag.appendChild(studentInfo);   
     }
+    container.appendChild(frag);
 }

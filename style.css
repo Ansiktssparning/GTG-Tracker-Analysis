@@ -41,7 +41,7 @@ nav {
 
 button {
     display: flex;
-	width: 150px;
+	width: 15%;
 	height: 45px;
 	font-size: 20px;
 	cursor: pointer;
@@ -58,7 +58,12 @@ button {
 button:hover {
 	color: #9AA0A6;
 }
+ 
+.results {
+	display: none;
+	margin-left: 1%; 
+}
 
-#results {
+#testDiv {
 	display: none;
 }
