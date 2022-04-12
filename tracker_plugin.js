@@ -2,15 +2,13 @@ fetch('data.json')
     .then(response => response.json())
     .then(data => displayData(data));
 
-function btnFunc(hiddenDiv) {
-    if(hiddenDiv.style.display === "none")
+function displayStudentResult(hiddenDiv, obj, sID) {
+    if(hiddenDiv.style.display === "none") {
         hiddenDiv.style.display = "block";
+        hiddenDiv.innerHTML = obj.students[sID].name;
+    }
     else
         hiddenDiv.style.display = "none";
-}
-
-function displayStudentResults(results, obj) {
-    results.innerHTML = obj.students[0].name;
 }
 
 function displayData(obj) {
@@ -24,9 +22,9 @@ function displayData(obj) {
         studentInfo.style.display = 'none';
         studentInfo.className = 'results';
         studentButton.textContent = obj.students[i].name;
+        studentButton.id = i;
 
-        studentButton.addEventListener("click", btnFunc.bind(null, studentInfo));
-        displayStudentResults(studentInfo, obj);
+        studentButton.addEventListener("click", displayStudentResult.bind(null, studentInfo, obj, studentButton.id));
 
         frag.appendChild(studentButton); 
         frag.appendChild(studentInfo);   
