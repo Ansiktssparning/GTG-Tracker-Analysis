@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang = "sv">
-    <head>
-        <meta charset="utf-8">
-        <title>Ansiktsspårningsanalys</title>
-        <link rel = "stylesheet", type = "text/css" href = "style.css">
-        <link rel = "icon" href = "images/sleepy.png">
-        <script type = "text/javascript" src = "tracker_plugin.js"></script>
+<!DOCTYPE html> <!-- deklareras så att browsen vet att den handskas med ett html dokument -->
+<html lang = "sv"> <!-- deklarerar att dokumentet är skrivet på svenska vilket hjälper search engines och sånt-->
+    <head> <!-- inkluderar data om hemsidan -->
+        <meta charset="utf-8"> <!-- säger att vi använder 8 bitars unicode, kan också användas för att specifiera andra saker som keywords vilket kan användas av search engines -->
+        <title>Ansiktsspårningsanalys</title> <!-- innehåller titeln på vår hemsida -->
+        <link rel = "stylesheet", type = "text/css" href = "style.css"> <!-- innehåller en länk till vårt dokument där vi rättar upp stilen på text och sånt i hemsidan, rel argumentet includerar hur länken relaterar till hemsidan -->
+        <link rel = "icon" href = "images/sleepy.png"> <!-- en länk till en bild som vi använder som icon på hemsidan -->
+        <script type = "text/javascript" src = "tracker_plugin.js"></script> <!-- berättar att vi skrivit ett program på javascript som dikterar över visa saker på hemsidan, samt includerar vart den hittas -->
     </head>
-    <body>
-        <header>
-            <nav>
-                <img class = "logo" src = "images/sleepy.png">
-                <h1>Ansiktsspårningsanalys</h1>
-            </nav>
-        </header>
-        <div class = "content">
-            <p>Välj vilken elev som ska undersökas nedan.</p>
+    <body> <!-- kan bara finnas en av dessa, de innehåller allt som ska visas på hemsidan -->
+        <header> <!-- innehåller navigations länkar och lite ord -->
+            <nav> <!-- innehåller navigations länkar-->
+                <img class = "logo" src = "images/sleepy.png"> <!-- säger att bild länken som vi anger är en logo, en logo har definerats i style.css -->
+                <h1>Ansiktsspårningsanalys</h1> <!-- gör texten till en header, header stilen har blivit definerat i style.css, man kan defienera andra headers som <h2>, <h3>... och vidare -->
+            </nav> 
+        </header> 
+        <div class = "content"> <!-- en div är en sektion i dokumentet som kan lätt bli manipulerat av det som är länkat i <script> och har ingen stark påverkan på det som är i diven, classen content är definerad i style.css -->
+            <p>Välj vilken elev som ska undersökas nedan.</p> <!-- <p> står för paragraf och innehåller text-->
             <!-- <img class = "funny" src = "images/waiting-house-md.gif" width = "200px" height = "200px"> -->
-            <div id = "JSONValues"></div>
+            <div id = "JSONValues"></div> <!-- denna diven refererar till en json fil som hämtats i tracker_plugin.js -->
         </div>
-    </body>
-</html>
+    </body> 
+</html> 
