@@ -41,7 +41,7 @@ nav {
 
 button {
     display: flex;
-	width: 15%;
+	width: 20%;
 	font-size: 24px;
 	cursor: pointer;
 	border: none;
@@ -61,4 +61,8 @@ button:hover {
 .results {
 	display: none;
 	margin: 0 0 1em 0.5%; /* top | right | bottom | left */
+}
+
+.textValues {
+	font-size: 18px;
 }

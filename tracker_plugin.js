@@ -3,11 +3,9 @@ fetch('data.json')
     .then(data => displayData(data));
 
 function displayStudentResult(hiddenDiv, obj, sID) {
-    if(hiddenDiv.style.display === "none") {
+    if(hiddenDiv.style.display === "none") 
         hiddenDiv.style.display = "block";
-        hiddenDiv.innerHTML = obj.students[sID].name;
-    }
-    else
+    else 
         hiddenDiv.style.display = "none";
 }
 
@@ -26,6 +24,19 @@ function displayData(obj) {
 
         studentButton.addEventListener("click", displayStudentResult.bind(null, studentInfo, obj, studentButton.id));
 
+        var avgGazeDir = document.createElement('p');
+        var avgEyelid = document.createElement('p');
+        var timeDiagram = new Image();
+
+        timeDiagram.src = obj.students[i].timeGraph;
+        avgGazeDir.className = "textValues";
+        avgEyelid.className = "textValues";
+        avgGazeDir.innerHTML = `Genomsnittlig tid med ouppmärksam blickriktning: ${obj.students[i].avgGazeDirection} sekunder`;
+        avgEyelid.innerHTML = `Genomsnittlig tid med ögonlocken stängda: ${obj.students[i].avgEyelid} sekunder`;
+
+        studentInfo.appendChild(avgGazeDir);
+        studentInfo.appendChild(avgEyelid);
+        studentInfo.append(timeDiagram);
         frag.appendChild(studentButton); 
         frag.appendChild(studentInfo);   
     }
