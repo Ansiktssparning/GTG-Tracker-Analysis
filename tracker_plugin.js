@@ -2,7 +2,7 @@ fetch('data.json')
     .then(response => response.json())
     .then(data => displayData(data));
 
-function displayStudentResult(hiddenDiv, obj, sID) {
+function displayStudentResult(hiddenDiv) {
     if(hiddenDiv.style.display === "none") 
         hiddenDiv.style.display = "block";
     else 
@@ -22,11 +22,11 @@ function displayData(obj) {
         studentButton.textContent = obj.students[i].name;
         studentButton.id = i;
 
-        studentButton.addEventListener("click", displayStudentResult.bind(null, studentInfo, obj, studentButton.id));
+        studentButton.addEventListener("click", displayStudentResult.bind(null, studentInfo));
 
         var avgGazeDir = document.createElement('p');
         var avgEyelid = document.createElement('p');
-        var timeDiagram = new Image();
+        var timeDiagram = document.createElement('img');
 
         timeDiagram.src = obj.students[i].timeGraph;
         avgGazeDir.className = "textValues";
