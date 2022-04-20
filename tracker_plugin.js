@@ -29,6 +29,8 @@ function displayData(obj) {
         var timeDiagram = document.createElement('img');
 
         timeDiagram.src = obj.students[i].timeGraph;
+        timeDiagram.style.width = "600px";
+        timeDiagram.style.height = "400px";
         avgGazeDir.className = "textValues";
         avgEyelid.className = "textValues";
         avgGazeDir.innerHTML = `Genomsnittlig tid med ouppmärksam blickriktning: ${obj.students[i].avgGazeDirection} sekunder`;
