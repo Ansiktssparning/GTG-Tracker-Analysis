@@ -1,70 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap'); /*importerar fonts*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap'); /* Importerar PT Sans typsnittet*/
 
-/*definerar <body> och <html> för index.html*/
 html, body {
-    background-color: #17181B; /*gör bakgrunden svart*/
-    color: #E8EAED; /*gör texten vit*/
-    font-family: 'PT Sans', sans-serif; /*specifierar fonten*/
-	height: 100%; /*säger att all utrymme i blocket ska vara svart*/
-	margin: 0; /*det finns inget mellanrum mellan nästa element i dukumentet*/
-	padding: 0; /*elementet sprider inte ut sig, jag vet inte hur jag ska beskriva detta, så testa*/
+    background-color: #17181B; /* Svart bakgrund */
+    color: #E8EAED; /* Vit text */
+    font-family: 'PT Sans', sans-serif; /* Specifierar fonten */
+	height: 100%; 
+	margin: 0; /* CSS */
+	padding: 0; /* Reset */
 }
 
-/*defienerar <h1> för index.html*/
 h1 {
-	margin: 0;
-	padding: 0;
-	font-size: 200%; /*påverkar text storlek, testa er fram*/
+	margin: 0; /* CSS */
+	padding: 0; /* Reset */
+	font-size: 200%; 
 }
 
-/*definerar classen content för index.html*/
 .content {
-	display: flex; /*sätter så att elementen med classen content automatiskt sätts upp på ett bra sätt*/
-	flex-direction: column; /*gör så att elementen passar in i en column*/
-	margin-left: 1%; /*lägger in så att elementen har lite mellanrum mellan vänstra väggen av hemsidan*/
+	display: flex; /* Integrerar flexbox i klassens barn */
+	flex-direction: column; /* Element placeras i kolumner */
+	margin-left: 1%; 
 }
 
-/*definerar stilen på header för index.html*/
 header {
-	width: 100%; /*header är inne i <body> området vilket betyder att denna kod säger att headern tar upp 100% av bredden för <body>*/
-	height: 10%; /*säger att headern är 10% av <body>*/
-	background-color: #0E1013; /*headern är en annan typ av svart än <body>*/
+	width: 100%; /* Täcker 100% av bredden hos <body> */
+	height: 10%; /*Täcker 10% höjden hos <body> */
+	background-color: #0E1013; 
 }
 
 nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
+	display: flex; 
+	flex-direction: row; /* Barnen placeras i rader */
+	justify-content: flex-start; /* Barnen börjar från vänster (x-axel) */
+	align-items: center; /* Barnen börjar från centern (y-axeln) */
 }
 
 .logo {
-	height: 3.5em;
-	margin: 0 1em 0 0.5em;
+	height: 3.5em; /* 3.5 ggr textstorleken i hemsidan */
+	margin: 0 1em 0 0.5em; /* Top | Höger | Botten | Vänster */
 }
 
 button {
-    display: flex;
+    display: flex; /* Integrerar flexbox i klassens barn */
 	width: 20%;
 	font-size: 24px;
-	cursor: pointer;
-	border: none;
-	outline: none;
-	background: transparent;
-	color: #E8EAED;
+	cursor: pointer; /* Muspekaren blir pekare */
+	border: none; /* Ingen kant */
+	outline: none; /* Samma som border */
+	background: transparent; /* Genomskinlig bakgrund */
+	color: #E8EAED; 
 	font-family: 'PT Sans', sans-serif;
-	font-weight: 700;
-    margin: 10px 0 10px 0;
-    z-index: 1;
+	font-weight: 700; /* Fetstil */
+    margin: 10px 0 10px 0; /* Top | Höger | Botten | Vänster */
+    z-index: 1; /* Hamnar längst fram relativt till andra element */
 }
 
 button:hover {
-	color: #9AA0A6;
+	color: #9AA0A6; /* Text blir grå när användare pekar på knappen */
 }
  
 .results {
-	display: none;
-	margin: 0 0 1em 0.5%; /* top | right | bottom | left */
+	display: none; /* Är osynlig för användare, finns fortfarande i DOM */
+	margin: 0 0 1em 0.5%; /* Top | Right | Bottom | Left */
 }
 
 .textValues {

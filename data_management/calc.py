@@ -1,35 +1,35 @@
 from statistics import mean
 import os
 
-diagram_path = r"images\diagram"
+diagram_path = r"images\diagram" # Adress till mapp med diagram
 
-values = {
+values = { # Deklaration av tomma fält
     "gaze": [],
     "eyelid": [],
     "diagram": []
 }
 
-# Gaze direction
-gaze_values = {
+# Blickriktning
+gaze_values = { # Deklaration av  test värden för blickriktning
     "Sven": [23,171,102],
     "Per": [23,240,69],
     "Joel": [1,422,42]
 }
 
-for key in gaze_values:
+for key in gaze_values: # Tar snitt av värdena för blickriktning och avrundar det
     values["gaze"].append(round(mean(gaze_values[key]))) 
 
-# Eyelid
-eyelid_values = {
+# Ögonlock
+eyelid_values = { # Deklaration av test värden för ögonlocken
     "Sven": [36,6,93],
     "Per": [50,78,49],
     "Joel": [52,61,9]
 }
 
-for key in eyelid_values:
+for key in eyelid_values: # Tar snitt av värdena för ögonlocken och avrundar det
     values["eyelid"].append(round(mean(eyelid_values[key]))) 
     
-for path, _, files in os.walk(diagram_path):
+for path, _, files in os.walk(diagram_path): # Laddar filer och sätter in rätt värden
     for file in files:
         image_path = os.path.join(diagram_path, file)
         values["diagram"].append(image_path)
