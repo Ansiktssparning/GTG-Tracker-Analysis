@@ -1,6 +1,8 @@
 from statistics import mean
 import os
 
+diagram_path = r"images\diagram"
+
 values = {
     "gaze": [],
     "eyelid": [],
@@ -27,8 +29,9 @@ eyelid_values = {
 for key in eyelid_values:
     values["eyelid"].append(round(mean(eyelid_values[key]))) 
     
-for i in range(3):
-    path = os.path.join("../images", f"graph{i}")
-    print(os.path.isfile(path))
+for path, _, files in os.walk(diagram_path):
+    for file in files:
+        image_path = os.path.join(diagram_path, file)
+        values["diagram"].append(image_path)
 
-# exec(open("data_management\pytest.py").read())
+exec(open("data_management\pytest.py").read())
