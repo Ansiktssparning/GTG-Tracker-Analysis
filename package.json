@@ -1,0 +1,22 @@
+{
+  "name": "gtg-tracker-analysis",
+  "version": "1.0.0",
+  "description": "Website for analysis of student awareness and attention",
+  "main": "tracker_plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansiktssparning/GTG_Tracker_Analysis.git"
+  },
+  "author": "BD-200 & Sn0wO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ansiktssparning/GTG_Tracker_Analysis/issues"
+  },
+  "homepage": "https://github.com/Ansiktssparning/GTG_Tracker_Analysis#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
