@@ -1,6 +1,7 @@
 fetch('data.json') // API som skickar nätverk requests
-    .then(response => response.json()) // Returnerar data som JSON objekt
-    .then(data => displayData(data)); 
+    .then(response => response.json())
+    .catch(error => console.log('Error:', error)) // Visar error om det fuckar upp
+    .then(data => displayData(data)); // Returnerar data som JSON objekt
 
 function displayStudentResult(hiddenDiv) { // Togglar fram och tillbaka elevens information
     if(hiddenDiv.style.display === "none") 

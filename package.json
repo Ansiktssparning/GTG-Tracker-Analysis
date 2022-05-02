@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/Ansiktssparning/GTG_Tracker_Analysis/issues"
   },
-  "homepage": "https://github.com/Ansiktssparning/GTG_Tracker_Analysis#readme",
-  "dependencies": {
-    "json-server": "^0.17.0"
-  }
+  "homepage": "https://github.com/Ansiktssparning/GTG_Tracker_Analysis#readme"
 }
