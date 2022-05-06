@@ -1,7 +1,7 @@
 from statistics import mean
 import os
 
-diagram_path = r"images\diagram" # Adress till mapp med diagram
+diagram_path = r"..\\public\\images" # Adress till mapp med diagram
 
 values = { # Deklaration av tomma fält
     "gaze": [],

@@ -4,19 +4,19 @@
             "name": "Sven Svensson",
             "avgGazeDirection": 99,
             "avgEyelid": 45,
-            "timeGraph": "images\\diagram\\graph0.png"
+            "timeGraph": "..\\public\\images\\diagram\\graph0.png"
         },
         {
             "name": "Per Persson",
             "avgGazeDirection": 111,
             "avgEyelid": 59,
-            "timeGraph": "images\\diagram\\graph1.png"
+            "timeGraph": "..\\public\\images\\diagram\\graph1.png"
         },
         {
             "name": "Joel Joelsson",
             "avgGazeDirection": 155,
             "avgEyelid": 41,
-            "timeGraph": "images\\diagram\\graph2.jpg"
+            "timeGraph": "..\\public\\images\\diagram\\graph2.jpg"
         }
     ]
 }
