@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
-const { Server } = require("socket.io");
+// const { Server } = require("socket.io");
 // const displayFunctions = require('./public/tracker_plugin');
 const jsonData = require('./data.json');
 
 const app = express();
 const server = require('http').createServer(app);
-const io = require('socket.io')(server, {cors: {origin: '*'}});
+// const io = require('socket.io')(server, {cors: {origin: '*'}});
 
 const public = path.join(__dirname, '/public');
 const hostname = "127.0.0.1";
@@ -26,7 +26,7 @@ server.listen(8080, () => {
 app.listen(port_client, function() {
   console.log(`Server running at http://localhost:${port_client}/`);
 });
-
+/*
 io.on('connection', () => {
   console.log(`User connected: ${socket.id}`);
-});
+});*/
