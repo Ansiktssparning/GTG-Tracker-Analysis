@@ -57,7 +57,7 @@ function displayData(obj) {
         frag.appendChild(studentButton); 
         frag.appendChild(studentInfo);   
     }
-    container.appendChild(frag);
+    container.appendChild(frag); // Bifogar fragment till container och visas på hemsidan
 }
 
 /*module.exports = {
