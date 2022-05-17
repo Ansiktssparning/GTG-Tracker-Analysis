@@ -15,8 +15,6 @@ app.get('/', function(req, res) {
 
 app.use(express.static(public_folder));
 
-app.use(express.json());
-
 server.listen(port_client, function() {
   console.log(`Server running at http://localhost:${port_client}/`);
 });
