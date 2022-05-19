@@ -1,26 +1,26 @@
 <!DOCTYPE html> 
 <html lang = "sv"> <!-- Hemsidans huvudspråk är svenska -->
-    <head> <!-- Inkluderar data om hemsidan -->
+    <head> 
         <meta charset="utf-8"> <!-- Använder 8 bitars unicode -->
         <title>Ansiktsspårningsanalys</title> 
         <link rel = "stylesheet", type = "text/css" href = "style.css"> <!-- CSS filen -->
         <link rel = "icon" href = "images/sleepy.png"> <!-- Icon bilden -->
-        <script type = "text/javascript" src = "tracker_plugin.js"></script>
+        <script type = "text/javascript" src = "tracker_plugin.js"></script> <!-- JS filen för client -->
     </head>
     <body> 
         <header> 
             <nav> 
-                <img class = "logo" src = "images/sleepy.png"> 
+                <img class = "logo" src = "images/sleepy.png"> <!-- Visa icon bild på navigeringsbaren -->
                 <h1>Ansiktsspårningsanalys</h1> 
             </nav> 
         </header> 
         <div class = "content"> 
             <p>Välj vilken elev som ska undersökas nedan.</p> 
-            <div id = "JSONValues"></div> 
+            <div id = "JSONValues"></div> <!-- Visar info om eleverna från tracker_plugin.js -->
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js"></script> <!-- Länk till CDN för socket.io -->
         <script>
-            const socket = io();
+            const socket = io(); // Initierar en io som kopplar till host:en
         </script>
     </body> 
 </html> 

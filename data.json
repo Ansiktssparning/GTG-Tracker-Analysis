@@ -2,7 +2,7 @@
     "students": [
         {
             "name": "Sven Svensson",
-            "avgGazeDirection": 99,
+            "avgGazeDirection": 99, 
             "avgEyelid": 45,
             "timeGraph": "images/diagram/graph0.png"
         },
