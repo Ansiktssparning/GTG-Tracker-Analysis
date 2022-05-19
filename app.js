@@ -21,4 +21,4 @@ server.listen(port_client, function() {
 
 io.on('connection', function(socket) { // Funktion till när servern får en connection event
     console.log('A connection was made'); // Skickar meddelande när hemsidan öppnas via TCP
-})
+});
